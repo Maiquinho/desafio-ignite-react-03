@@ -31,6 +31,16 @@ export const mixins = {
       font-size: 0.75rem;
       font-weight: 700;
       line-height: 1.6;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      border-bottom: 1px solid transparent;
+
+      transition: 0.2s ease;
+
+      &:hover {
+        border-bottom-color: ${(props) => props.theme.blue};
+      }
     `,
   },
 }
