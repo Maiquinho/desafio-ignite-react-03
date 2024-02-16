@@ -1,10 +1,14 @@
 import {
+  FeedHeading,
+  FeedWrapper,
   HomeWrapper,
   ProfileAvatar,
   ProfileHeading,
   ProfileInfo,
   ProfileWrapper,
 } from './styles'
+
+import { SearchForm } from './components/SearchForm'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
@@ -57,6 +61,13 @@ export function Home() {
           </footer>
         </ProfileInfo>
       </ProfileWrapper>
+      <FeedWrapper>
+        <FeedHeading>
+          <h2>Publicações</h2>
+          <span>6 publicações</span>
+        </FeedHeading>
+        <SearchForm />
+      </FeedWrapper>
     </HomeWrapper>
   )
 }

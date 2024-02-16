@@ -86,3 +86,23 @@ export const ProfileHeading = styled.header`
     }
   }
 `
+
+export const FeedWrapper = styled.section`
+  margin-top: 4.5rem;
+`
+
+export const FeedHeading = styled.header`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h2 {
+    ${mixins.fonts.titleS}
+    color: ${(props) => props.theme['base-subtitle']};
+  }
+
+  & span {
+    ${mixins.fonts.textS}
+    color: ${(props) => props.theme['base-span']};
+  }
+`
