@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
+
 import {
+  FeedGrid,
   FeedHeading,
   FeedWrapper,
   HomeWrapper,
@@ -17,6 +20,7 @@ import {
   faBuilding,
   faUserGroup,
 } from '@fortawesome/free-solid-svg-icons'
+import { Article } from './components/Article'
 
 export function Home() {
   return (
@@ -29,14 +33,14 @@ export function Home() {
         <ProfileInfo>
           <ProfileHeading>
             <h1>Michael Matheus</h1>
-            <a
-              href="https://github.com/maiquinho"
+            <Link
+              to="https://github.com/maiquinho"
               target="_blank"
               rel="noreferrer"
             >
               Github
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} fontSize={12} />
-            </a>
+            </Link>
           </ProfileHeading>
           <p>
             Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
@@ -67,6 +71,14 @@ export function Home() {
           <span>6 publicações</span>
         </FeedHeading>
         <SearchForm />
+        <FeedGrid>
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+          <Article />
+        </FeedGrid>
       </FeedWrapper>
     </HomeWrapper>
   )

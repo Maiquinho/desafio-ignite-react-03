@@ -4,6 +4,8 @@ import { mixins } from '../../styles/mixins'
 export const HomeWrapper = styled.main`
   max-width: 54rem;
   margin: 0 auto;
+
+  padding-bottom: 14.625rem;
 `
 
 export const ProfileWrapper = styled.section`
@@ -64,7 +66,7 @@ export const ProfileInfo = styled.div`
 
 export const ProfileHeading = styled.header`
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 
   & h1 {
@@ -105,4 +107,12 @@ export const FeedHeading = styled.header`
     ${mixins.fonts.textS}
     color: ${(props) => props.theme['base-span']};
   }
+`
+
+export const FeedGrid = styled.div`
+  margin-top: 3rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 `
